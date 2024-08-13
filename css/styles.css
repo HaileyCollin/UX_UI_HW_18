@@ -83,6 +83,9 @@
     background-color: rgb(68,32,48); 
     color: white;
     border-color: rgba(0,0,0,0);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 
   h1 {
@@ -136,6 +139,99 @@ body {
 }
 
 .felxContainer {
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: left;
 }
 
+.flex-item {
+  width: 100%; 
+  margin: 0, auto;
+  background-color: none;
+  text-align: center; 
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-item img {
+  height: 100px;
+  width: 100px;
+}
+
+
+.about img{
+    height: 300px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.workGrid img {
+    height: 400px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.workGrid {
+  display: grid;
+  min-height: 500px;
+  grid-template-rows: 50%, 50%;
+  grid-template-columns: 2fr 2fr;
+  gap: 100px;
+  grid-template-areas: 
+  "grid-item1"
+  "grid-item2"
+  "grid-item3"
+  "grid-item4"
+  ;
+}
+
+.grid-item1 {
+  color: white;
+  font-size: 48px;
+  font-family: "Advent Pro";
+  text-align: start;
+  padding: 20px;
+}
+
+.grid-item2 {
+  color: white;
+  font-size: 48px;
+  font-family: "Advent Pro";
+  text-align: start;
+  padding: 20px;
+}
+
+.grid-item3 {
+  color: white;
+  font-size: 48px;
+  font-family: "Advent Pro";
+  text-align: start;
+  padding: 20px;
+}
+
+.grid-item4 {
+  color: white;
+  font-size: 48px;
+  font-family: "Advent Pro";
+  text-align: start;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .workGrid {
+    flex-direction: column;
+    grid-template-areas:
+    "grid-item1"
+    "grid-item2"
+    "grid-item3"
+    "grid-item4"
+    ;
+    grid-template-rows: 300px, 300px, 300px;
+    grid-template-columns: 1fr;
+  }
+}
